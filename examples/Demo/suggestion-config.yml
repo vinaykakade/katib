@@ -4,6 +4,6 @@ suggestionparameters:
         name: "DefaultGrid"
         value: "1"
     - 
-        name: "--min-child-weight"
+        name: "--min_child_weight"
         value: "4"
 
