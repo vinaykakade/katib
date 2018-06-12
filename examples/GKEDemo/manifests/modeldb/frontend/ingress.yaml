@@ -4,6 +4,10 @@
    name: katib-ui
    namespace: katib
  spec:
-   backend:
-       serviceName: modeldb-frontend
-       servicePort: 80
+  rules:
+    - host: modeldb-frontend.ingress.hpsearch.us-east-1.k8s.lyft.net
+      http:
+        paths:
+          - backend:
+              serviceName: modeldb-frontend
+              servicePort: 443
