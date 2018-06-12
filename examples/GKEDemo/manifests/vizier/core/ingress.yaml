@@ -1,9 +1,17 @@
- apiVersion: extensions/v1beta1
- kind: Ingress
- metadata:
-   name: vizier-core
-   namespace: katib
- spec:
-   backend:
-      serviceName: vizier-core
-      servicePort: 6789
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.org/grpc-services: "vizier-core"
+    nginx.ingress.kubernetes.io/grpc-backend: "true"
+  name: vizier-core
+  namespace: katib
+spec:
+  rules:
+    - host: vizier-core.ingress.hpsearch.us-east-1.k8s.lyft.net
+      http:
+        paths:
+          - backend:
+              serviceName: vizier-core
+              servicePort: 80
