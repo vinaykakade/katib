@@ -1,0 +1,5 @@
+image: "katib-xgboost:0.0.1"
+command: 
+    - "python"
+    - "/usr/src/app/train"
+gpu: 0

@@ -1,0 +1,22 @@
+name: katib-xgboost
+owner: katib
+optimizationtype: 2
+optimizationgoal: 0.99
+parameterconfigs:
+  configs:
+  - name: --min-child-weight
+    parametertype: 1
+    feasible:
+      min: "1"
+      max: "10"
+  - name: --max-depth
+    parametertype: 2
+    feasible:
+      min: "2"
+      max: "5"
+defaultsuggestionalgorithm: random
+defaultearlystoppingalgorithm: medianstopping
+objectivevaluename: MeanTestAccuracy
+metrics:
+- accuracy
+
