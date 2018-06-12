@@ -4,12 +4,12 @@ optimizationtype: 2
 optimizationgoal: 0.99
 parameterconfigs:
   configs:
-  - name: --min-child-weight
+  - name: --min_child_weight
     parametertype: 1
     feasible:
       min: "1"
       max: "10"
-  - name: --max-depth
+  - name: --max_depth
     parametertype: 2
     feasible:
       min: "2"
