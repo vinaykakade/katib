@@ -7,9 +7,9 @@ metadata:
     app: vizier
     component: core
 spec:
+  type: ClusterIP
   ports:
-    - port: 80
-      targetPort: 6789
+    - port: 6789
       protocol: TCP
       name: api
   selector:
